@@ -1,5 +1,13 @@
 # Smart Campus Sensor & Room Management API
 
+
+
+
+## Video of the overall running project
+
+<video src="./assets/demo-video.mp4" controls width="600"></video>
+
+
 A RESTful API built with **JAX-RS (Jersey)** and an embedded **Grizzly** HTTP server
 for managing campus rooms and IoT sensors.
 
@@ -220,13 +228,13 @@ The sub-resource locator pattern allows a resource method to **return another re
 rather than a response. JAX-RS then dispatches the remainder of the URI to that returned object.
 
 **Benefits:**
-1. **Separation of concerns** — reading logic lives in `SensorReadingResource`, not buried in
-   `SensorResource`, making each class smaller and focused.
-2. **Testability** — `SensorReadingResource` can be unit tested independently of `SensorResource`.
-3. **Scalability** — adding `/alerts`, `/config`, or `/calibration` sub-resources means creating
-   new classes, not adding more methods to an already large class.
-4. **Readability** — avoids a single "god class" with dozens of `@Path` methods covering every
-   possible nested route.
+1. **Separation of concerns**, The main logic for reading is contained within a dedicated `SensorReadingResource` rather than being hidden inside
+`SensorResource`, so both classes become smaller and have more targeted focus.
+2. **Testability**, It is possible to perform unit tests on `SensorReadingResource` without requiring `SensorResource`.
+3. **Scalability**, If  decided to implement `/alerts`, `/config`, or `/calibration` sub-resources, it means a whole new class will be created rather than adding yet more method to the already large class.
+4. **Readability**, This approach is a big improvement over having one "god class" with
+different dozens of `@Path` methods for pretty much every possible nested route.
+
 
 ---
 
@@ -275,3 +283,5 @@ Using JAX-RS filters for cross-cutting concerns like logging is superior because
 5. **Standard pattern** — filters are the JAX-RS-standard mechanism for cross-cutting concerns
    (logging, authentication, CORS, rate limiting), making the codebase easier to understand
    for any JAX-RS developer.
+
+

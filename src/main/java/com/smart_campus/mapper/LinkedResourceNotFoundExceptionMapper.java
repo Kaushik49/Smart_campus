@@ -8,13 +8,17 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
-/**
- * Maps LinkedResourceNotFoundException → HTTP 422 Unprocessable Entity.
- *
- * Triggered when a POST /sensors body contains a roomId that does not exist.
- * The request URI is valid and the JSON is well-formed, but the referenced
- * resource (room) is missing — hence 422 is semantically more accurate than 404.
+
+ /*
+ 
+ Maps LinkedResourceNotFoundException to HTTP 422 Unprocessable Entity.
+Raised if the POST /sensors payload includes a non-existing roomId.
+The request URI is correct and the JSON is properly formed, however the
+referenced resource (room) is absent, so 422 is really the more
+semantically correct response compared to 404.
+ 
  */
+
 @Provider
 public class LinkedResourceNotFoundExceptionMapper
         implements ExceptionMapper<LinkedResourceNotFoundException> {

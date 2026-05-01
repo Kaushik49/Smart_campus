@@ -8,27 +8,33 @@ import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-/**
- * API Observability Filter — logs every request and response.
- *
- * Implements BOTH ContainerRequestFilter and ContainerResponseFilter
- * so a single class handles inbound and outbound logging.
- *
- * Logged per request:  HTTP method + full request URI
- * Logged per response: HTTP status code
- *
- * REPORT — Why use filters instead of Logger.info() in every resource method?
- *   1. Cross-cutting concern: Logging applies to every endpoint uniformly.
- *      Adding Logger.info() to 20 methods means 20 places to update if the
- *      log format changes.
- *   2. DRY (Don't Repeat Yourself): One filter = one source of truth for logging logic.
- *   3. Separation of concerns: Resource classes focus on business logic; the filter
- *      handles observability. This makes both easier to read and test.
- *   4. Consistency: A filter guarantees every request is logged even if a developer
- *      forgets to add the log statement to a new resource method.
- *   5. Aspect-Oriented: JAX-RS filters are the standard mechanism for cross-cutting
- *      concerns like logging, authentication, CORS, and rate-limiting.
- */
+
+/*
+
+API Observability Filter, logs each and every request and response.
+This implementation runs as a pair of filters:
+ContainerRequestFilter and ContainerResponseFilter enabling the same single class to carry out the logging of both inbound and outbound messages.
+Details logged with each request: the HTTP method along with the entire request URI
+Details logged with each response: HTTP status code
+REPORT, Why rely on filters rather than just placing Logger.info() inside each resource method?
+1. Cross-cutting concern: Logging is something that is commonplace to all endpoints in the same way.
+So attaching Logger.info() to 20 methods means that you have to update 20 separate places in case the
+log format changes.
+2. DRY (Don't Repeat Yourself): A single filter is a single source of truth for
+the logging logic.
+3. Separation of concerns: Resource classes are meant for the business logic only; the filter
+can take care of the observability part which leads to a much cleaner and more
+testable code on both sides.
+4. Consistency: A filter ensures that every request gets logged even if a developer
+fails to remember to put the log statement in a newly created resource method.
+5. Aspect-Oriented: JAX-RS filters are the official way for cross-cutting
+concerns such as logging, authentication, CORS, and rate-limiting.
+
+
+
+
+*/
+ 
 @Provider
 public class LoggingFilter implements ContainerRequestFilter, ContainerResponseFilter {
 

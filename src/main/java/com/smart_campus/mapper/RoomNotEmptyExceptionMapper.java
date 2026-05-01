@@ -8,12 +8,18 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
-/**
- * Maps RoomNotEmptyException → HTTP 409 Conflict.
- *
- * Triggered when a DELETE /rooms/{roomId} is attempted on a room that still
- * has sensors assigned. The JSON body explains which sensors are blocking deletion.
- */
+
+  /*
+  
+  
+  
+Maps RoomNotEmptyException → HTTP 409 Conflict.
+ 
+Triggered when a DELETE /rooms/{roomId} is attempted on a room that still
+has sensors assigned. The JSON body explains which sensors are blocking deletion.
+  
+  */
+
 @Provider
 public class RoomNotEmptyExceptionMapper implements ExceptionMapper<RoomNotEmptyException> {
 
