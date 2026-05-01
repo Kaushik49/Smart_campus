@@ -6,7 +6,7 @@
 
 ## Video of the overall running project
 
-![Demo video](https://youtu.be/QOP_B2FeLZU)
+[![Demo video](https://img.youtube.com/vi/QOP_B2FeLZU/0.jpg)](https://youtu.be/QOP_B2FeLZU)
 
 
 
