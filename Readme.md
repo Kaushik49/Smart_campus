@@ -4,7 +4,16 @@
 
 
 
+## Video of the overall running project
 
+<video src='./assets/dem-video.mp4' controls width="600" >
+ 
+</video>
+
+
+A RESTful API built with **JAX-RS (Jersey)** and an embedded **Grizzly** HTTP server
+for managing campus rooms and IoT sensors.
+would this work
 
 ---
 
