@@ -6,9 +6,8 @@
 
 ## Video of the overall running project
 
-<video src='https://github.com/Kaushik49/Smart_campus/blob/main/assets/dem-video.mp4' controls width="600" >
- 
-</video>
+[![Watch the video](https://github.com)](https://github.com/Kaushik49/Smart_campus/blob/main/assets/dem-video.mp4)
+
 
 
 A RESTful API built with **JAX-RS (Jersey)** and an embedded **Grizzly** HTTP server
