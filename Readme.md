@@ -6,7 +6,7 @@
 
 ## Video of the overall running project
 
-[![Video tutorial]](https://github.com/Kaushik49/Smart_campus/blob/main/assets/dem-video.mp4)
+[![Watch the video](https://github.com/Kaushik49/Smart_campus/blob/main/assets/dem-video.mp4)](https://github.com/Kaushik49/Smart_campus/blob/main/assets/dem-video.mp4)
 
 
 
