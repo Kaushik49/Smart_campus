@@ -6,7 +6,7 @@
 
 ## Video of the overall running project
 
-<video src='./assets/dem-video.mp4' controls width="600" >
+<video src='https://github.com/Kaushik49/Smart_campus/blob/main/assets/dem-video.mp4' controls width="600" >
  
 </video>
 
