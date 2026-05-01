@@ -5,7 +5,7 @@
 
 ## Video of the overall running project
 
-<video src="./assets/demo-video.mp4" controls width="600"></video>
+<video src="./assets/Screen Recording 2026-05-01 at 16.10.36.mov" controls width="600"></video>
 
 
 A RESTful API built with **JAX-RS (Jersey)** and an embedded **Grizzly** HTTP server
