@@ -5,7 +5,7 @@
 
 ## Video of the overall running project
 
-<video src="./assets/Screen Recording 2026-05-01 at 16.10.36.mov" controls width="600"></video>
+<video src="https://github.com/Kaushik49/Smart_campus/blob/main/assets/Screen%20Recording%202026-05-01%20at%2016.10.36.mov" controls width="600"></video>
 
 
 A RESTful API built with **JAX-RS (Jersey)** and an embedded **Grizzly** HTTP server
