@@ -3,15 +3,8 @@
 
 
 
-## Video of the overall running project
-
-<video src="https://raw.githubusercontent.com/Kaushik49/Smart_campus/main/assets/Screen%20Recording%202026-05-01%20at%2016.10.36.mov" controls width="600" muted>
- 
-</video>
 
 
-A RESTful API built with **JAX-RS (Jersey)** and an embedded **Grizzly** HTTP server
-for managing campus rooms and IoT sensors.
 
 ---
 
